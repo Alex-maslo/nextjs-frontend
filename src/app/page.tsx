@@ -1,8 +1,22 @@
-import React from "react";
+export const dynamic = "force-dynamic";
 
 const HomePage = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}`);
-  const text = await res.text();
+  let text = "";
+
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}`, {
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+
+    text = await res.text();
+  } catch (error) {
+    console.error("Fetch failed:", error);
+    text = "Помилка при отриманні даних";
+  }
 
   return (
     <div className="flex justify-center mt-10 ">
