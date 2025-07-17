@@ -3,16 +3,4 @@
   <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
-  <component name="SaveActionSettings">
-    <option name="actions">
-      <set>
-        <option value="activate" />
-        <option value="activateOnShortcut" />
-        <option value="activateOnBatch" />
-        <option value="organizeImports" />
-        <option value="reformat" />
-      </set>
-    </option>
-    <option name="configurationPath" value="" />
-  </component>
 </project>
